@@ -9,7 +9,7 @@ $(document).ready(function () {
 
             categories.forEach(category => {
                 let categoryCard = `
-                <div onclick="mealDetail('${category.strCategory}')" id="${category.idCategory}" class="relative hover:cursor-pointer overflow-hidden w-60 group rounded-xl shadow-md duration-300 text-slate-500 shadow-slate-200">
+                <div onclick="categoryDetail('${category.strCategory}')" id="${category.idCategory}" class="relative hover:cursor-pointer overflow-hidden w-60 group rounded-xl shadow-md duration-300 text-slate-500 shadow-slate-200">
                     <figure class="relative border-2 border-slate-200">
                         <img src="${category.strCategoryThumb}" alt="${category.strCategory} image" class="aspect-video w-full duration-300 transition  group-hover:scale-105" />
                         <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -32,6 +32,6 @@ $(document).ready(function () {
 
 })
 
-function mealDetail(categoryName) {
+function categoryDetail(categoryName) {
     window.location.href = `category-detail.html?category_name=${categoryName}`
 }
